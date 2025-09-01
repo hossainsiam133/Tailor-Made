@@ -1,11 +1,12 @@
 <?php
     include 'connection.php';
     session_start();
-    $user_id=$_SESSION['user_id'];
+    $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+    // $user_id=$_SESSION['user_id'];
 
-    if(!isset($user_id)){
-       header('location:login.php');
-    }
+    // if(!isset($user_id)){
+    //    header('location:login.php');
+    // }
     if(isset($_POST['logout'])){
         session_destroy();
         header('location:login.php');
@@ -95,11 +96,12 @@ Over the years, we have grown and adapted to changing market trends while mainta
     <div class="row">
         <div class="box">
             <div class="img-box">
-                <img src="img/employee1.png">
+                <!-- <img src="img/employee1.png"> -->
+                <img src="img/siam.jpg">
                 </div>
             <div class="detail1">
-                <span>Finance Manager</span>
-                <h4>Fardin Ahmed</h4>
+                <span>Developer</span>
+                <h4>Siam Hossain</h4>
                 <div class="icons">
                <i class="bi bi-instagram"></i>
                <i class="bi bi-twitter"></i>
@@ -112,11 +114,11 @@ Over the years, we have grown and adapted to changing market trends while mainta
         </div>
        <div class="box">
             <div class="img-box">
-            <img src="img/employee2.png">
+            <img src="img/rakib.jpg">
             </div>
             <div class="detail1">
                 <span>Quality Controller</span>
-                <h4>Sharmin Sara</h4>
+                <h4>Rakib Hossain</h4>
                 <div class="icons">
                <i class="bi bi-instagram"></i>
                <i class="bi bi-twitter"></i>
@@ -129,11 +131,11 @@ Over the years, we have grown and adapted to changing market trends while mainta
         </div>
         <div class="box">
             <div class="img-box">
-            <img src="img/employee3.png">
+            <img src="img/soyad.jpg">
             </div>
             <div class="detail1">
                 <span>Market Analyst</span>
-                <h4>Lutfur Rahman</h4>
+                <h4>Soyad Rahman</h4>
                 <div class="icons">
                <i class="bi bi-instagram"></i>
                <i class="bi bi-twitter"></i>
@@ -146,11 +148,11 @@ Over the years, we have grown and adapted to changing market trends while mainta
         </div>
         <div class="box">
             <div class="img-box">
-            <img src="img/employee4.png">
+            <img src="img/talha.jpg">
             </div>
             <div class="detail1">
-                <span>Fashion Designer</span>
-                <h4>Laura Dutta</h4>
+                <span>UI/UX Designer</span>
+                <h4>Talha Mahmud</h4>
                 <div class="icons">
                <i class="bi bi-instagram"></i>
                <i class="bi bi-twitter"></i>

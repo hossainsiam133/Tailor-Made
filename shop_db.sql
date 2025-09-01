@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 25, 2025 at 06:00 PM
+-- Generation Time: Sep 01, 2025 at 05:25 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,8 +42,9 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `user_id`, `pid`, `name`, `price`, `quantity`, `image`) VALUES
-(39, 6, 16, 'Jacket', '3200', '2', 'jacket.jpg'),
-(40, 6, 29, 'Midnight Blue Printed Viscose-Cotton Panjabi', '1837', '1', 'Midnight Blue Printed Viscose.webp');
+(43, 6, 34, 'Test', '1000', '1', 'Saree2.webp'),
+(44, 6, 33, 'Teal Green Crepe Straight Salwar Kameez', '7791', '1', 'Kameez.webp'),
+(45, 0, 34, 'Test', '1000', '1', 'Saree2.webp');
 
 -- --------------------------------------------------------
 
@@ -148,8 +149,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `user_type`) VALUES
-(1, 'siam', 'siam@gmail.com', '123', 'admin'),
-(6, 'Alif', 'alif@gmail.com', '1111', 'user');
+(1, 'siam', 'cpsiam221@gmail.com', '221661', 'admin'),
+(6, 'Alif', 'alif@gmail.com', '1111', 'user'),
+(7, 'mahmud', 'mahmud69@gmail.com', '1111', 'user'),
+(8, 'Asif', 'asif@gmail.com', '1212', 'user');
 
 -- --------------------------------------------------------
 
@@ -172,7 +175,9 @@ CREATE TABLE `wishlist` (
 
 INSERT INTO `wishlist` (`id`, `user_id`, `pid`, `name`, `price`, `image`) VALUES
 (11, 6, 11, 'Blue Pant', '700', 'nil.webp'),
-(12, 6, 29, 'Midnight Blue Printed Viscose-Cotton Panjabi', '1837', 'Midnight Blue Printed Viscose.webp');
+(12, 6, 29, 'Midnight Blue Printed Viscose-Cotton Panjabi', '1837', 'Midnight Blue Printed Viscose.webp'),
+(13, 0, 22, 'Formal Shoe for Men', '1400', 'shoe.jpeg'),
+(14, 0, 34, 'Test', '1000', 'Saree2.webp');
 
 --
 -- Indexes for dumped tables
@@ -222,7 +227,7 @@ ALTER TABLE `wishlist`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `massage`
@@ -246,13 +251,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

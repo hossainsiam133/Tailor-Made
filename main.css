@@ -7,6 +7,26 @@
     --box-shadow2: 0px 0px 0px 6px rgb(255 255 255/40%);
     --orange: rgb(168, 134, 205);
 }
+.login-btn {
+    display: inline-block;
+    padding: 8px 18px;
+    background: #3498db;   /* blue background */
+    color: #fff;           /* white text */
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none; /* remove underline */
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #2980b9;   /* darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
 a{
     text-decoration: none;
 }

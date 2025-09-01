@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- box icon link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>"> 
     <title>Document</title>
 </head>
 <body>
     <header class="header">
         <br>
-            <div class="flex"><a href="index.php" class="logo"><img src="img/logo2.png" id="img1"></a>
+            <div class="flex"><a href="index.php" class="logo"><img src= "img/logoF.png"  id="img1"></a>
             <nav class="navbar">
             <a href="index.php">home</a>
             <a href="about.php">about us</a>
@@ -35,12 +35,26 @@
             <i class="bi bi-list" id="menu-btn"></i>
         </div>
         <div class="user-box">
+    <!-- updated login -->
+    <?php if(isset($_SESSION['user_id'])): ?>
+        <p><b>Username : </b><span><?php echo $_SESSION['user_name']; ?></span></p>
+        <p><b>Email : </b><span><?php echo $_SESSION['user_email']; ?></span></p>
+        <form method="post">
+            <button type="submit" name="logout" class="logout-btn">Log out</button>
+        </form>
+        <?php else: ?>
+        <p><b>Welcome, Guest!</b></p>
+        <a href="login.php" class="login-btn">Login</a>
+    <?php endif; ?>
+</div>
+
+        <!-- <div class="user-box">
             <p><b>Username : </b><span><?php echo $_SESSION['user_name']; ?></span></p>
             <p><b>Email : </b><span><?php echo $_SESSION['user_email']; ?></span></p>
             <form method="post">
                 <button type="submit" name="logout" class="logout-btn">log out</button>
             </form>
-        </div>
+        </div> -->
     </div>
     </header>
     
